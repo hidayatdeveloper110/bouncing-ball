@@ -1,0 +1,32 @@
+ body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background: #111;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ball {
+  width: 50px;
+  height: 50px;
+  background: orange;
+  border-radius: 100%;
+  position: absolute;
+  animation: moveX 5s linear infinite alternate,
+             moveY 3s ease-in-out infinite alternate;
+}
+
+/* Move Left ↔ Right */
+@keyframes moveX {
+  from { left: 0; }
+  to   { left: calc(100vw - 50px); }
+}
+
+/* Move Top ↕ Bottom */
+@keyframes moveY {
+  from { top: 0; }
+  to   { top: calc(100vh - 50px); }
+}
